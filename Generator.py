@@ -47,7 +47,7 @@ else :
 
 while 1:
     try:
-        user_count = int(input("List Length: "))/4 #another variablr input to know how many useres he wants to generate
+        user_count = int(input("List Length: ")) #another variablr input to know how many useres he wants to generate
     except:
         print("Input Must Be Numerical!?")
         continue
@@ -55,59 +55,59 @@ while 1:
         break
 
 things = "~`!@#$%^&*()_-+={[}]|\:;\"'<,>.?/"
-things_2 = "_"
+
 if ".txt" in name_of_folder:
     folder = open(name_of_folder, "w+")
 else:
     folder = open(name_of_folder+ ".txt", "w+")
 
 def all_gen():
-    for user in range(user_len):
+    for user in range(1):
             le = 1
             while le <= user_count:
+                le += 1
                 user = random.choice(things) + random.choice(things) + random.choice(things) + string.ascii_lowercase + string.digits + string.digits + string.digits + random.choice(things) + random.choice(things) + random.choice(things)
                 folder.write("".join(random.choice(user) for i in range(user_len)) + "\n")
-                le += 1
     folder.close()
     print("Done!")
 
 def user_only_gen():
-    for user in range(user_len):
+    for user in range(1):
             le = 1
             while le <= user_count:
+                le += 1
                 user = string.ascii_lowercase
                 folder.write("".join(random.choice(user) for i in range(user_len)) + "\n")
-                le += 1
     folder.close()
     print("Done!")
 
 def twos_user___gen():
-    for user in range(user_len):
+    for user in range(1):
             le = 1
             while le <= user_count:
-                user = string.ascii_lowercase + things_2
-                folder.write("".join(random.choice(user) for i in range(user_len)) + "\n")
                 le += 1
+                user = string.ascii_lowercase + random.choice(things)
+                folder.write("".join(random.choice(user) for i in range(user_len)) + "\n")
     folder.close()
     print("Done!")
 
 def user_num_gen():
-    for user in range(user_len):
+    for user in range(1):
             le = 1
             while le <= user_count:
+                le += 1
                 user = string.ascii_lowercase + string.digits 
                 folder.write("".join(random.choice(user) for i in range(user_len)) + "\n")
-                le += 1
     folder.close()
     print("Done!")
 
 def user_punc_gen():
-    for user in range(user_len):
+    for user in range(1):
             le = 1
             while le <= user_count:
+                le += 1
                 user = string.ascii_lowercase  + random.choice(things) + random.choice(things) + random.choice(things) + random.choice(things)
                 folder.write("".join(random.choice(user) for i in range(user_len)) + "\n")
-                le += 1
     folder.close()
     print("Done!")
 
@@ -136,7 +136,7 @@ while 1:
     if q == "y":
         while 1:
             try:
-                user_len = int(input("Length: ")) 
+                user_len = int(input("Length: "))
             except:
                 print("Input Must Be Numerical!?")
                 continue
@@ -152,7 +152,7 @@ while 1:
             name_of_folder = input("File Name: ")
         while 1:
             try:
-                user_count = int(input("List Length: "))/4
+                user_count = int(input("List Length: "))
             except:
                 print("Input Must Be Numerical!?")
                 continue
